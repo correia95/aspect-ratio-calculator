@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d9488" />
+
+    <title>Aspect Ratio Calculator — resize to 16:9, find a ratio, fit a box</title>
+    <meta
+      name="description"
+      content="Resize width and height to an aspect ratio without distortion, find the simplified ratio of any pixel size, or scale a size to fit inside a box. Presets for 16:9, 4:3, 9:16, 21:9, 2.39:1 and more. Free, runs in your browser."
+    />
+    <link rel="canonical" href="https://aspect-ratio-calculator.correia95.workers.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aspect Ratio Calculator" />
+    <meta property="og:description" content="Resize to a ratio, find a ratio, or fit a size inside a box — no distortion. Video, photo, print and social presets." />
+    <meta property="og:url" content="https://aspect-ratio-calculator.correia95.workers.dev/" />
+    <meta property="og:image" content="https://aspect-ratio-calculator.correia95.workers.dev/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aspect Ratio Calculator" />
+    <meta name="twitter:description" content="Resize to a ratio, find a ratio, or fit a size inside a box — no distortion." />
+    <meta name="twitter:image" content="https://aspect-ratio-calculator.correia95.workers.dev/og.svg" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Aspect Ratio Calculator",
+        "url": "https://aspect-ratio-calculator.correia95.workers.dev/",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Resize dimensions to an aspect ratio, simplify the ratio of a pixel size, and fit a size inside a box, entirely in the browser."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I resize an image to 16:9 without stretching?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Fix the ratio at 16:9, enter the width you want, and the height is width times 9 divided by 16. At 2560 wide the height is 1440. Enter the height instead to solve for the width."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What aspect ratio is 1920 by 1080?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "16:9. Both numbers divide by 120, giving 16 and 9. The decimal form is about 1.778 to 1."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is 21:9 really?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ultrawide monitors marketed as 21:9 are usually 64:27, which is 16:9 stretched by another 16:9. 3440 by 1440 is a common 21:9 resolution."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between fit and fill?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Fit scales a size down until the whole thing sits inside a box, possibly leaving bars on two sides. Fill scales up until the box is covered and crops the overflow. This calculator does fit, with no cropping."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="text-align: center; padding: 20px">
+        This aspect ratio calculator needs JavaScript. It resizes width and height to a ratio without
+        distortion, simplifies the ratio of a pixel size, and fits a size inside a box.
+      </p>
+    </noscript>
+  </body>
+</html>

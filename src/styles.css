@@ -1,0 +1,91 @@
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --card-2: #eceef2;
+  --ink: #1a1f27;
+  --ink-soft: #5e6874;
+  --line: #dde2e8;
+  --brand: #0d9488;
+  --brand-soft: #d7f0ed;
+  --warn: #9a5b00;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1013;
+    --card: #171a20;
+    --card-2: #1e222b;
+    --ink: #e7eaef;
+    --ink-soft: #98a1ad;
+    --line: #272c35;
+    --brand: #2dd4bf;
+    --brand-soft: #123030;
+    --warn: #e6b45f;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.app { max-width: 640px; margin: 0 auto; padding: 26px 16px 60px; }
+header h1 { font-size: clamp(1.5rem, 4.5vw, 2rem); margin: 0 0 6px; letter-spacing: -0.02em; }
+.tag { color: var(--ink-soft); margin: 0 0 20px; max-width: 60ch; font-size: 0.94rem; }
+
+.tabs { display: flex; gap: 4px; margin-bottom: 0; }
+.tabs button {
+  border: 1px solid var(--line); border-bottom: 0; background: var(--card-2); color: var(--ink-soft);
+  font: inherit; font-weight: 600; font-size: 0.82rem; padding: 8px 12px; border-radius: 8px 8px 0 0; cursor: pointer; flex: 1;
+}
+.tabs button.on { background: var(--card); color: var(--brand); }
+
+.panel { border: 1px solid var(--line); border-radius: 0 0 12px 12px; background: var(--card); padding: 16px; }
+
+.ratiorow { display: flex; align-items: flex-end; gap: 8px; margin-bottom: 10px; }
+.ratiorow > span { font-size: 0.76rem; font-weight: 600; color: var(--ink-soft); padding-bottom: 10px; }
+.ratiorow b { font-size: 1.3rem; padding-bottom: 6px; }
+.ratiorow .f { flex: 1; }
+
+.f { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.f > span { font-size: 0.73rem; font-weight: 600; color: var(--ink-soft); }
+.f input {
+  width: 100%; min-width: 0; border: 1px solid var(--line); border-radius: 9px; background: var(--card-2);
+  color: var(--ink); font-family: var(--mono); font-size: 1.05rem; font-weight: 600; padding: 10px 11px; outline: none;
+}
+.f input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-soft); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+
+.presets { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+.presets button {
+  border: 1px solid var(--line); background: var(--card-2); color: var(--ink); font: inherit;
+  font-size: 0.8rem; font-weight: 600; padding: 5px 10px; border-radius: 999px; cursor: pointer;
+}
+.presets button.on { background: var(--brand); border-color: var(--brand); color: #fff; }
+
+.answer {
+  background: var(--brand-soft); border-radius: 12px; padding: 16px; text-align: center;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.answer strong { font-size: clamp(1.6rem, 6vw, 2.2rem); font-weight: 800; letter-spacing: -0.02em; font-family: var(--mono); }
+.answer span { font-size: 0.85rem; color: var(--ink-soft); }
+.answer .named { margin: 6px 0 0; font-size: 0.88rem; font-weight: 600; }
+.answer .warn { margin: 6px 0 0; font-size: 0.8rem; color: var(--warn); }
+.hint { color: var(--ink-soft); text-align: center; padding: 14px; margin: 0; }
+
+.share { margin-top: 14px; width: 100%; border: 0; background: var(--brand); color: #fff; font: inherit; font-weight: 700; padding: 11px; border-radius: 10px; cursor: pointer; }
+
+.explainer { margin-top: 34px; border-top: 1px solid var(--line); padding-top: 10px; }
+.explainer h2 { font-size: 1.15rem; margin: 18px 0 8px; }
+.explainer h3 { font-size: 0.98rem; margin: 16px 0 6px; }
+.explainer p, .explainer li { color: var(--ink-soft); font-size: 0.92rem; }
+.explainer code { font-family: var(--mono); font-size: 0.85em; background: var(--card-2); padding: 1px 5px; border-radius: 4px; }
+.explainer table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 0.88rem; }
+.explainer td { border: 1px solid var(--line); padding: 6px 9px; color: var(--ink-soft); }
+.explainer td:first-child { font-family: var(--mono); font-weight: 700; color: var(--brand); white-space: nowrap; }
+.explainer footer { margin-top: 24px; text-align: center; font-size: 0.8rem; color: var(--ink-soft); }

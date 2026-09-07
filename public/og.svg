@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0d1013" />
+  <text x="90" y="140" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="76" font-weight="800" fill="#e7eaef" letter-spacing="-1">Aspect Ratio Calculator</text>
+  <text x="90" y="192" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="27" fill="#98a1ad">Resize to a ratio · find a ratio · fit inside a box — no distortion</text>
+  <g stroke="#2dd4bf" stroke-width="3" fill="#171a20">
+    <rect x="90" y="250" width="320" height="180" rx="8"/>
+    <rect x="440" y="250" width="240" height="180" rx="8"/>
+    <rect x="710" y="250" width="180" height="180" rx="8"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" text-anchor="middle" fill="#2dd4bf" font-weight="700">
+    <text x="250" y="350" font-size="44">16:9</text>
+    <text x="250" y="395" font-size="20" fill="#98a1ad">1920 × 1080</text>
+    <text x="560" y="350" font-size="44">4:3</text>
+    <text x="800" y="350" font-size="44">1:1</text>
+  </g>
+  <text x="90" y="500" font-family="-apple-system, Segoe UI, Roboto, sans-serif" font-size="24" fill="#2dd4bf">Video · photo · print · social presets · runs in your browser</text>
+</svg>
