@@ -89,3 +89,14 @@ header h1 { font-size: clamp(1.5rem, 4.5vw, 2rem); margin: 0 0 6px; letter-spaci
 .explainer td { border: 1px solid var(--line); padding: 6px 9px; color: var(--ink-soft); }
 .explainer td:first-child { font-family: var(--mono); font-weight: 700; color: var(--brand); white-space: nowrap; }
 .explainer footer { margin-top: 24px; text-align: center; font-size: 0.8rem; color: var(--ink-soft); }
+
+/* a11y-contrast-fixes (auto, WCAG AA 4.5:1) */
+@media (prefers-color-scheme: light) {
+  .tabs button.on { color: #0b8278; }
+  .presets button.on { color: #0b0b0f; }
+  .share { color: #0b0b0f; }
+}
+@media (prefers-color-scheme: dark) {
+  .presets button.on { color: #0b0b0f; }
+  .share { color: #0b0b0f; }
+}
